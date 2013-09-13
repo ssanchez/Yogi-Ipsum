@@ -1,0 +1,30 @@
+// We use this to control border radius.
+@mixin border-radius($radius: 10px) {
+  @if $radius {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+  }
+}
+
+// yes, depreciated, but here for now
+@mixin box-shadow($color, $hoffset, $voffset, $blur:4px, $spread:0){
+	-webkit-box-shadow: $hoffset $voffset $blur $spread $color;
+	-moz-box-shadow: $hoffset $voffset $blur $spread $color;
+	box-shadow: $hoffset $voffset $blur $spread $color;
+}
+
+// Used to easily create borders in one
+@mixin borders($width, $style, $color, $top:true, $right: true, $bottom:true, $left:true) {
+  @if $left {
+    border-left: $width $style $color;
+  }
+  @if $right {
+    border-right: $width $style $color;
+  }
+  @if $top {
+    border-top: $width $style $color;
+  }
+  @if $bottom {
+    border-bottom: $width $style $color;
+  }
+}

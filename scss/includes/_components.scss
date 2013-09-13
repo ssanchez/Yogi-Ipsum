@@ -1,0 +1,170 @@
+html, body {
+	background-color: $primary-color;
+	height: 100%;
+}
+
+.titlebar {
+	// background-color: lighten($primary-color, 15%);
+	background-color: $primary-color;
+	color: $secondary-color;
+	@include borders(4px, solid, $tertiary-color, $top:false, $right:false, $left:false);
+
+	h1 {
+		background-color: $primary-color;
+		color: $secondary-color;
+		margin-bottom: 0;
+		padding: emCalc(5, 10);
+		position: relative;
+		text-align: center;
+		@include side-radius('bottom');
+
+		@media #{$small} {
+			font-size: emCalc(64);
+			position: absolute;
+
+			@include borders(emCalc(3), solid, $tertiary-color, $top:false);
+		}
+	}
+	div {
+		@include grid-row;
+
+		@media #{$small} {
+			text-align: right;
+		}
+	}
+	p {
+		@extend .hide-for-small;
+		margin-bottom: 0;
+
+		@media #{$small} {
+			display: block;
+		}
+	}
+}
+
+
+
+.main {
+	background-color: $secondary-color;
+}
+
+.controls {
+	padding-bottom: emCalc(30);
+	@include grid-row;
+
+	@media #{$small} {
+		padding-top: emCalc(15);
+	}
+
+	dl {
+		@include grid-row(nested);
+
+		dt {
+			@include grid-column(8);
+			@media #{$small} {
+				@include grid-column(4);
+			}
+		}
+		dd {
+			@include grid-column(4);
+			@media #{$small} {
+				@include grid-column(2);
+			}
+		}
+	}
+
+	> div {
+		@include grid-column(12);
+
+		&.options {
+			@media #{$small} {
+				@include grid-column(8, false, false, 4);
+			}
+		}
+		&.update {
+			@media #{$small} {
+				@include grid-column(4, true, false, 6);
+			}
+		}
+	}
+}
+
+.toggler {
+	@include switch($switch-paddle-transition-speed, $switch-paddle-transition-ease, $switch-height-sml, $switch-font-size-sml, 2.3em, $switch-paddle-bg, $switch-positive-color, $switch-negative-color, 15px, true);
+}
+
+.update input {
+	@include button($button-med, $primary-color, true, true, false, true);
+}
+
+.yogi {
+	@include grid-row;
+	padding-bottom: emCalc(30);
+
+	figure {
+		text-align: center;
+
+		@media #{$small} {
+			@include grid-column(6);
+		}
+	}
+
+	> div {
+		margin-bottom: emCalc(15);
+		@include speech-bubble( bottom, $ipsum-container-height-mobile );
+
+		@media #{$small} {
+			@include grid-column(6);
+			@include speech-bubble( right, $ipsum-container-height-small );
+		}
+	}
+
+	img {
+		@include box-shadow($global-shadow-color, emCalc(2), emCalc(2), emCalc(4));
+	}
+}
+
+textarea {
+	height: emCalc($ipsum-container-height-mobile);
+	resize: none;
+
+	@media #{$small} {
+		height: emCalc($ipsum-container-height-small);
+	}
+
+}
+
+figcaption {
+	display: none;
+}
+
+
+#infobar {
+	color: $secondary-color;
+
+	a {
+		color: $secondary-color;
+		border-bottom: 2px dashed $secondary-color;
+	}
+
+	div {
+		@include grid-row;
+	}
+	p {
+		@include grid-column(12);
+
+		@media #{$small} {
+			@include grid-column(9);
+		}
+	}
+	h3 {
+		color: $secondary-color;
+		@include grid-column(12);
+
+		@media #{$small} {
+			@include grid-column(3);
+		}
+	}
+}
+
+

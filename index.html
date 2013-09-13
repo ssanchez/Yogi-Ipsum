@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Yogi Ipsum - It's not the words you need, it's the text</title>
+	<meta name="description" content="Filler text based on the most famous quotes from Yogi Berra">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato'>
+	<script src="js/vendor/custom.modernizr.js"></script>
+</head>
+<body>
+	<header class="titlebar">
+		<div>
+			<h1>Yogi Ipsum</h1>
+			<p><em>It's not the words you need, it's the text</em></p>
+		</div>
+	</header>
+
+	<div class="main">
+		<div class="controls">
+
+			<div class="options">
+				<dl>
+					<dt>Number of paragraphs:</dt>
+					<dd>
+						<select id="numParagraphs">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+						</select>
+					</dd>
+
+					<dt>Start with "It ain't over...":</dt>
+					<dd class="toggler">
+						<input id="itAintOver1" name="itAintOver" type="radio" checked>
+						<label for="itAintOver1">No</label>
+						<input id="itAintOver" name="itAintOver" type="radio">
+						<label for="itAintOver">Yes</label>
+						<span></span>
+					</dd>
+				</dl>
+
+				<dl>
+					<dt>Wrap in <code>&lt;p&gt;</code> tags:</dt>
+					<dd class="toggler">
+						<input id="wrappers1" name="wrappers" type="radio" checked>
+						<label for="wrappers1">No</label>
+						<input id="wrappers" name="wrappers" type="radio">
+						<label for="wrappers">Yes</label>
+						<span></span>
+					</dd>
+
+					<dt>Yogi<sup>2</sup> :</dt>
+					<dd class="toggler">
+						<input id="jumble1" name="jumble" type="radio" checked>
+						<label for="jumble1" onclick="">Off</label>
+						<input id="jumble" name="jumble" type="radio">
+						<label for="jumble" onclick="">On</label>
+						<span></span>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="update">
+				<input type="button" value="Generate" id="generate">
+			</div>
+		</div>
+
+
+		<div class="yogi">
+			<div>
+				<textarea id="ipsum"></textarea>
+			</div>
+
+			<figure>
+				<img src="img/yogi-card.png" alt="Yogi Berra, 1956">
+				<figcaption>Baseball Digest, front cover, September 1956 issue.</figcaption>
+			</figure>
+		</div>
+	</div>
+
+
+
+	<footer id="infobar">
+		<div>
+			<h3>So, why another ipsum?</h3>
+
+			<p>There are lots of text generators out there, each with its own twist on the same basic function &mdash; but how many tap the rich trove of paradoxes and tautologies so fondly referred to as <em><a href="http://www.yogiberra.com/yogi-isms.html" title="Yogi-isms at YogiBerra.com" target="_blank">yogi-isms</a></em>? I figured we needed at least one.</p>
+		</div>
+	</footer>
+
+<!-- 	<footer>
+		&copy; 2013
+	</footer>
+ -->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+	<script src="js/foundation/foundation.js"></script>
+	<script src="js/libs.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

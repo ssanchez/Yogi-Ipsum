@@ -1,0 +1,159 @@
+// SASS-ified version of code found at
+// http://www.sitepoint.com/pure-css3-speech-bubbles/
+//
+// mixins found in includes/_mixins.scss and foundation/components/_global.scss
+
+$bubble-border-color: #666 !default;
+$bubble-border-radius: 30;
+$bubble-background-color: #fff;
+$bubble-padding-vertical: 20;
+$bubble-padding-horizontal: 2;
+$bubble-shadow-offset: 2;
+$bubble-shadow-blur: 4;
+$bubble-shadow-color: #888 !default;
+
+
+// makes a speech bubble
+// $side is the side you want the directional triangle on
+@mixin speech-bubble( $side, $height ){
+	position: relative;
+	height: emCalc($height + ($bubble-padding-vertical * 2));
+
+	background-color: $bubble-background-color;
+	padding: emCalc($bubble-padding-vertical, $bubble-padding-horizontal);
+
+	border: 8px solid $bubble-border-color;
+	@include radius(emCalc($bubble-border-radius));
+	@include box-shadow($bubble-shadow-color, emCalc($bubble-shadow-offset), emCalc($bubble-shadow-offset), emCalc($bubble-shadow-blur));
+
+	// before and after are for the triangle
+	&:before,
+	&:after {
+		content: ' ';
+		position: absolute;
+		width: 0;
+		height: 0;
+	}
+	&:before {
+		border: 25px solid;
+	}
+	&:after {
+		border: 15px solid;
+	}
+
+	@if $side == right {
+		&:before {
+			top: auto;
+			right: -50px;
+			bottom: 30px;
+			left: auto;
+			// border-color: $bubble-border-color transparent transparent $bubble-border-color;
+			border-color: transparent transparent $bubble-border-color $bubble-border-color;
+		}
+		&:after {
+			top: auto;
+			right: -30px;
+			// bottom: 42px;
+			bottom: 38px;
+			left: auto;
+			// border-color: #fff transparent transparent #fff;
+			border-color: transparent transparent #fff #fff;
+		}
+
+	}
+	@else {
+		&:before {
+			top: auto;
+			right: auto;
+			bottom: -50px;
+			left: 30px;
+			border-color: $bubble-border-color $bubble-border-color transparent transparent;
+		}
+		&:after {
+			top: auto;
+			right: auto;
+			bottom: -30px;
+			left: 42px;
+			border-color: #fff #fff transparent transparent;
+		}
+
+	}
+}
+
+// .speech {
+// 	position: relative;
+// 	height: $bubble-height;
+// 	background-color: $bubble-background-color;
+// 	padding: emCalc($bubble-padding-vertical, $bubble-padding-horizontal);
+
+// 	border: 8px solid $bubble-border-color;
+// 	@include radius(emCalc($bubble-border-radius));
+// 	@include box-shadow($bubble-shadow-color, emCalc($bubble-shadow-offset), emCalc($bubble-shadow-offset), emCalc($bubble-shadow-blur));
+// }
+
+// .speech:before {
+// 	content: ' ';
+// 	position: absolute;
+// 	width: 0;
+// 	height: 0;
+
+// 	right: 30px;
+// 	bottom: -50px;
+// 	border: 25px solid;
+// 	border-color: $bubble-border-color transparent transparent $bubble-border-color;
+// }
+
+// .speech:after {
+// 	content: ' ';
+// 	position: absolute;
+// 	width: 0;
+// 	height: 0;
+// 	right: 42px;
+// 	bottom: -30px;
+// 	border: 15px solid;
+// 	border-color: #fff transparent transparent #fff;
+// }
+
+
+
+// thought bubbles
+// .thought
+// {
+// 	position: relative;
+// 	width: 130px;
+// 	height: 100px;
+// 	text-align: center;
+// 	line-height: 100px;
+// 	background-color: $bubble-background-color;
+// 	border: 8px solid $bubble-border-color;
+// 	-webkit-border-radius: 58px;
+// 	-moz-border-radius: 58px;
+// 	border-radius: 58px;
+// 	-webkit-box-shadow: 2px 2px 4px #888;
+// 	-moz-box-shadow: 2px 2px 4px #888;
+// 	box-shadow: 2px 2px 4px #888;
+// }
+
+// .thought:before, .thought:after
+// {
+// 	left: 10px;
+// 	top: 70px;
+// 	width: 40px;
+// 	height: 40px;
+// 	background-color: #fff;
+// 	border: 8px solid $bubble-border-color;
+// 	-webkit-border-radius: 28px;
+// 	-moz-border-radius: 28px;
+// 	border-radius: 28px;
+// }
+
+// .thought:after
+// {
+// 	width: 20px;
+// 	height: 20px;
+// 	left: 5px;
+// 	top: 100px;
+// 	-webkit-border-radius: 18px;
+// 	-moz-border-radius: 18px;
+// 	border-radius: 18px;
+// }
