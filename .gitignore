@@ -41,26 +41,7 @@ build/buildinfo.properties
 build/config/buildinfo.properties
 
 # Unused files
-foundation.abide.js
-foundation.alerts.js
-foundation.clearing.js
-foundation.cookie.js
-foundation.dropdown.js
-foundation.forms.js
-foundation.interchange.js
-foundation.joyride.js
-foundation.magellan.js
-foundation.orbit.js
-foundation.placeholder.js
-foundation.reveal.js
-foundation.section.js
 foundation.tooltips.js
-foundation.topbar.js
-foundation/index.js
-jquery-1.7*
-jquery-1.8*
-jquery.js
-zepto.js
 _alert-boxes.scss
 _block-grid.scss
 _flex-video.scss
