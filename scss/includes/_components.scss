@@ -46,6 +46,31 @@ html, body {
 
 .main {
 	background-color: $secondary-color;
+
+	> figure, h2, p {
+		text-align: center;
+	}
+
+	h2 {
+		padding-top: emCalc(25);
+
+		@media #{$small} {
+			padding-top: emCalc(75);
+		}
+	}
+
+	> p {
+		padding-bottom: emCalc(25);
+	}
+
+	a {
+		font-weight: bold;
+
+		&:hover {
+			border-bottom: 2px dashed $primary-color;
+		}
+	}
+
 }
 
 .controls {
