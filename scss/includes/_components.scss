@@ -103,11 +103,17 @@ html, body {
 
 		&.options {
 			@media #{$small} {
+				@include grid-column(7, false, false, 5);
+			}
+			@media #{$tablet-vert} {
 				@include grid-column(8, false, false, 4);
 			}
 		}
 		&.update {
 			@media #{$small} {
+				@include grid-column(4, true, false, 7);
+			}
+			@media #{$tablet-vert} {
 				@include grid-column(4, true, false, 6);
 			}
 		}

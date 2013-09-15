@@ -115,13 +115,13 @@ $global-radius: 8px;
 // Media Queries
 
 // $small-screen: 768px;
-$average-size-screen: 1024px;
+$tablet-vert-screen: 900px;
 // $medium-screen: 1280px;
 // $large-screen: 1440px;
 
 // $screen: "only screen";
 // $small: "only screen and (min-width: #{$small-screen})";
-$average-size: "only screen and (min-width: #{$average-size-screen})";
+$tablet-vert: "only screen and (min-width: #{$tablet-vert-screen})";
 // $medium: "only screen and (min-width: #{$medium-screen})";
 // $large: "only screen and (min-width: #{$large-screen})";
 // $landscape: "only screen and (orientation: landscape)";
