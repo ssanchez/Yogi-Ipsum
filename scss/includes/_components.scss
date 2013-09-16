@@ -7,7 +7,7 @@ html, body {
 	// background-color: lighten($primary-color, 15%);
 	background-color: $primary-color;
 	color: $secondary-color;
-	@include borders(4px, solid, $tertiary-color, $top:false, $right:false, $left:false);
+	@include borders(8px, solid, $tertiary-color, $top:false, $right:false, $left:false);
 
 	h1 {
 		background-color: $primary-color;
@@ -22,7 +22,7 @@ html, body {
 			font-size: emCalc(64);
 			position: absolute;
 
-			@include borders(emCalc(3), solid, $tertiary-color, $top:false);
+			@include borders(8px, solid, $tertiary-color, $top:false);
 		}
 	}
 	div {
@@ -34,6 +34,7 @@ html, body {
 	}
 	p {
 		@extend .hide-for-small;
+		background-color: $primary-color;
 		margin-bottom: 0;
 		@include grid-column(12);
 	}
