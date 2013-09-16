@@ -35,10 +35,7 @@ html, body {
 	p {
 		@extend .hide-for-small;
 		margin-bottom: 0;
-
-		@media #{$small} {
-			display: block;
-		}
+		@include grid-column(12);
 	}
 }
 
