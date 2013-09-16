@@ -36,6 +36,9 @@ intermediate
 publish
 .idea
 
+# unneeded compiled css folder files
+css/*.css
+
 # build script local files
 build/buildinfo.properties
 build/config/buildinfo.properties
