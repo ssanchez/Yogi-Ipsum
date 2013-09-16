@@ -34,7 +34,7 @@ html, body {
 	}
 	p {
 		@extend .hide-for-small;
-		background-color: $primary-color;
+		// background-color: $primary-color;
 		margin-bottom: 0;
 		@include grid-column(12);
 	}
@@ -170,10 +170,14 @@ figcaption {
 
 #infobar {
 	color: $secondary-color;
+	@include borders(8px, solid, $tertiary-color, $bottom:false, $right:false, $left:false);
 
 	a {
 		color: $secondary-color;
-		border-bottom: 2px dashed $secondary-color;
+
+		&:hover {
+			border-bottom: 2px dashed $secondary-color;
+		}
 	}
 
 	div {
