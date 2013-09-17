@@ -11,6 +11,7 @@
  *
  * internals:
  *		yogiipsum.global
+ *		yogiipsum.analytics
  *		yogiipsum.phrases
  *
  */
@@ -43,6 +44,55 @@
 			this._bindEvents();
 		}
 	};
+
+
+
+
+	/**
+	 *
+	 * yogiipsum.analytics
+	 *
+	 * handles most of the google analytics functionality for the site
+	 *
+	 */
+	ns.analytics = {
+		_bindEvents: function () {
+			var that = this;
+
+			/* send off an event when generate is clicked including current vals */
+			$('#generate').click(function(){
+				var vals = [];
+				$('input').filter(':checked').add('#numParagraphs').each(function(){
+					vals.push('|', this.name, '=', this.value);
+				});
+				that.trackEvent('User Action', 'generate ipsum ' + vals.join(''));
+			});
+
+			/* the next two fire events when changing options */
+			$('input').filter('[type="radio"]').each(function(){
+				$(this).click(function(){
+					that.trackEvent('User Action', this.name + ' changed to ' + this.value);
+				});
+			});
+			$('#numParagraphs').change(function(){
+				that.trackEvent('User Action', 'num paragraphs changed to ' + this.value);
+			});
+		},
+
+
+		/* generic functino to send and event to GA */
+		trackEvent: function ( eventname, action ) {
+			if ( window._gaq ) {
+				_gaq.push( ['_trackEvent', eventname, action] );
+			}
+		},
+
+	
+		init: function () {
+			this._bindEvents();
+		}
+	};
+	
 
 
 
@@ -127,6 +177,7 @@
 	ns.init = function () {
 		ns.global.init();
 		ns.phrases.init();
+		ns.analytics.init();
 		$(document).foundation();
 	};
 
