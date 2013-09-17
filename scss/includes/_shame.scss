@@ -1,0 +1,8 @@
+// fix for browsers that can't handle before and after
+.lt-ie9	.yogi > div {
+	&:before,
+	&:after {
+		display:none;
+	}
+}
+

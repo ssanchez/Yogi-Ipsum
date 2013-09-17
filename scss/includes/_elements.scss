@@ -1,0 +1,23 @@
+html, body {
+	background-color: $primary-color;
+	height: 100%;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+textarea {
+	height: emCalc($ipsum-container-height-mobile);
+	resize: none;
+
+	@media #{$small} {
+		height: emCalc($ipsum-container-height-small);
+	}
+
+}
+
+figcaption {
+	display: none;
+}
+
