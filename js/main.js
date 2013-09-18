@@ -61,29 +61,36 @@
 
 			/* send off an event when generate is clicked including current vals */
 			$('#generate').click(function(){
-				var vals = [];
-				$('input').filter(':checked').add('#numParagraphs').each(function(){
-					vals.push('|', this.name, '=', this.value);
-				});
-				that.trackEvent('User Action', 'generate ipsum ' + vals.join(''));
+				that.trackEvent('User Action', 'generate ipsum');
 			});
 
 			/* the next two fire events when changing options */
 			$('input').filter('[type="radio"]').each(function(){
 				$(this).click(function(){
-					that.trackEvent('User Action', this.name + ': ' + this.value);
+					that.trackEvent('User Action', this.name + ' to: ' + this.value);
 				});
 			});
 			$('#numParagraphs').change(function(){
-				that.trackEvent('User Action', 'num paragraphs: ' + this.value);
+				that.trackEvent('User Action', 'num paragraphs to: ' + this.value);
 			});
 		},
 
 
-		/* generic function to send and event to GA */
+		/* returns a pipe-delimeted string of name/val pairs for the user-changable controls */
+		_serialize: function () {
+			var vals = [];
+			$('input').filter(':checked').add('#numParagraphs').each(function(){
+				vals.push('|', this.name, '=', this.value);
+			});
+			return vals.join('');
+		},
+
+
+
+		/* Generic function to send and event to GA. Label is always form config. */
 		trackEvent: function ( eventname, action ) {
 			if ( window._gaq !== undefined ) {
-				window._gaq.push( ['_trackEvent', eventname, action] );
+				window._gaq.push( ['_trackEvent', eventname, action, this._serialize()] );
 			}
 		},
 
