@@ -69,17 +69,15 @@
 }
 
 .controls {
+	padding-top: emCalc(15);
 	padding-bottom: emCalc(30);
 	@include grid-row;
-
-	@media #{$small} {
-		padding-top: emCalc(15);
-	}
 
 	dl {
 		@include grid-row(nested);
 
 		dt {
+			font-size: emCalc(12);
 			@include grid-column(8);
 			@media #{$small} {
 				@include grid-column(4);
