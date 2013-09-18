@@ -71,28 +71,28 @@
 			/* the next two fire events when changing options */
 			$('input').filter('[type="radio"]').each(function(){
 				$(this).click(function(){
-					that.trackEvent('User Action', this.name + ' changed to ' + this.value);
+					that.trackEvent('User Action', this.name + ': ' + this.value);
 				});
 			});
 			$('#numParagraphs').change(function(){
-				that.trackEvent('User Action', 'num paragraphs changed to ' + this.value);
+				that.trackEvent('User Action', 'num paragraphs: ' + this.value);
 			});
 		},
 
 
-		/* generic functino to send and event to GA */
+		/* generic function to send and event to GA */
 		trackEvent: function ( eventname, action ) {
-			if ( window._gaq ) {
-				_gaq.push( ['_trackEvent', eventname, action] );
+			if ( window._gaq !== undefined ) {
+				window._gaq.push( ['_trackEvent', eventname, action] );
 			}
 		},
 
-	
+
 		init: function () {
 			this._bindEvents();
 		}
 	};
-	
+
 
 
 
