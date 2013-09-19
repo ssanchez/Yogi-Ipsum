@@ -1,5 +1,7 @@
 // local vars
 
+$tertiary-color: rgb(160, 159, 156);   // grey
+$darkest-color: darken($tertiary-color, 90%);   // blackish
 $global-shadow-color: #888;
 
 $ipsum-container-height-mobile: 230;
@@ -7,3 +9,6 @@ $ipsum-container-height-small: 330;
 
 $bubble-border-color: $tertiary-color;
 $bubble-shadow-color: $global-shadow-color;
+
+$tablet-vert-screen: 948px;
+$tablet-vert: "only screen and (min-width: #{$tablet-vert-screen})";

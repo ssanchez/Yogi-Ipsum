@@ -69,7 +69,6 @@ $body-font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans
 
 $primary-color: rgb(54, 59, 72);   // blue
 $secondary-color: rgb(244, 245, 240);   // white
-$tertiary-color: rgb(160, 159, 156);   // grey
 // $alert-color: #c60f13;
 // $success-color: #5da423;
 
@@ -115,13 +114,11 @@ $global-radius: 8px;
 // Media Queries
 
 // $small-screen: 768px;
-$tablet-vert-screen: 948px;
 // $medium-screen: 1280px;
 // $large-screen: 1440px;
 
 // $screen: "only screen";
 // $small: "only screen and (min-width: #{$small-screen})";
-$tablet-vert: "only screen and (min-width: #{$tablet-vert-screen})";
 // $medium: "only screen and (min-width: #{$medium-screen})";
 // $large: "only screen and (min-width: #{$large-screen})";
 // $landscape: "only screen and (orientation: landscape)";
