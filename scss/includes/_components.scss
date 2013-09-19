@@ -148,9 +148,10 @@
 	}
 }
 
-#infobar {
+.reasons {
 	color: $secondary-color;
-	@include borders(8px, solid, $tertiary-color, $bottom:false, $right:false, $left:false);
+	padding-top: emCalc(15);
+	@include borders(8px, solid, $tertiary-color, $right:false, $left:false);
 
 	a {
 		color: $secondary-color;
@@ -160,7 +161,7 @@
 		}
 	}
 
-	div {
+	> div {
 		@include grid-row;
 	}
 	p {
