@@ -182,3 +182,19 @@
 }
 
 
+.infobar {
+	background-color: $darkest-color;
+	color: $secondary-color;
+
+	> div {
+		@include grid-row();
+	}
+
+	p {
+		padding-top: emCalc(30);
+		padding-bottom: emCalc(30);
+		text-align: right;
+		@include grid-column(12);
+	}
+}
+
