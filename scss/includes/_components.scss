@@ -9,11 +9,17 @@
 		color: $secondary-color;
 		letter-spacing: 4px;
 		margin-bottom: 0;
-		padding: emCalc(5, 10);
+		padding: emCalc(4, 8);
 		position: relative;
 		text-align: center;
 		text-transform: uppercase;
 		@include side-radius('bottom');
+
+		em {
+			font-family: "times new roman", "times", "serif";
+			letter-spacing: -4px;
+			text-transform: capitalize;
+		}
 
 		@media #{$small} {
 			font-size: emCalc(64);
