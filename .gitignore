@@ -42,7 +42,6 @@ build/buildinfo.properties
 build/config/buildinfo.properties
 
 # Unused files
-foundation.tooltips.js
 _alert-boxes.scss
 _block-grid.scss
 _flex-video.scss
@@ -71,4 +70,3 @@ _thumbs.scss
 _dropdown.scss
 _keystrokes.scss
 _reveal.scss
-_tooltips.scss
