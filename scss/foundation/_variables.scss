@@ -1215,7 +1215,7 @@ $button-radius: $global-radius;
 
 // $has-tip-border-bottom: dotted 1px #ccc;
 // $has-tip-font-weight: bold;
-// $has-tip-font-color: #333;
+$has-tip-font-color: lighten($primary-color,50%);
 // $has-tip-border-bottom-hover: dotted 1px darken($primary-color, 20%);
 // $has-tip-font-color-hover: $primary-color;
 // $has-tip-cursor-type: help;
