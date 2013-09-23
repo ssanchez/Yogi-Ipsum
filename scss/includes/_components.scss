@@ -200,11 +200,8 @@
 		margin-bottom: 0;
 		padding-top: emCalc(15);
 		padding-bottom: emCalc(15);
-		@include grid-column(6);
 
-		&.creds {
-			text-align: right;
-		}
+		@include grid-column(12);
 	}
 }
 
