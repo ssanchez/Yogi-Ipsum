@@ -198,9 +198,8 @@
 	}
 	p {
 		margin-bottom: 0;
-		padding-top: emCalc(15);
-		padding-bottom: emCalc(15);
-
+		padding-top: emCalc(20);
+		padding-bottom: emCalc(16);
 		@include grid-column(12);
 	}
 }
