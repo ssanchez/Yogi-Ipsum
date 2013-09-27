@@ -3,11 +3,11 @@
 
 # TEAM
 
-    Spencer Sanchez -- @espencero
+    Development & Main Design, Spencer Sanchez -- @espencero
 
 # THANKS
 
-    Ryan Doherty, Design Consigliere -- @
+    Design Consigliere, J. Ryan Doherty -- @jryandoherty
 
 # SITE
 
