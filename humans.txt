@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Spencer Sanchez -- @espencero
+
+# THANKS
+
+    Ryan Doherty, Design Consigliere -- @
+
+# SITE
+
+    HTML5, CSS3
+    Normalize.css, jQuery, HTML5 Boilerplate, Zurb Foundation 4
+    IDE: Sublime Text, Photoshop
+
+    Source: https://github.com/ssanchez/Yogi-Ipsum/
