@@ -187,7 +187,13 @@
 		margin-bottom: 0;
 		padding-top: emCalc(20);
 		padding-bottom: emCalc(16);
+		text-align: right;
 		@include grid-column(12);
 	}
+}
+
+.github {
+	float: right;
+	margin-left: 4px;
 }
 
