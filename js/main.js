@@ -33,10 +33,20 @@
 		_bindEvents: function () {
 			var that = this;
 
-			$('input[type="submit"]').click(function(event){
+			// control external links to new windows tagged with class 'external'
+			$('a').filter('.external').click(function(event){
 				event.preventDefault();
-				return false;
+				that.openWindow( this.href );
 			});
+		},
+
+
+		// Opens a new window with passed url. Width and height are optionally
+		// passed in. Menubar and toolbar are explicitly set to off.
+		openWindow: function (url, width, height) {
+			width = typeof width === 'undefined' ? 550 : width;
+			height = typeof height === 'undefined' ? 400 : height;
+			window.open(url, 'kid', 'width='+ width +',height='+ height +',menubar=no,toolbar=no');
 		},
 
 
@@ -59,12 +69,12 @@
 		_bindEvents: function () {
 			var that = this;
 
-			/* send off an event when generate is clicked including current vals */
+			// send off an event when generate is clicked including current vals
 			$('#generate').click(function(){
 				that.trackEvent('User Action', 'generate ipsum');
 			});
 
-			/* the next two fire events when changing options */
+			// the next two fire events when changing options
 			$('input').filter('[type="radio"]').each(function(){
 				$(this).click(function(){
 					that.trackEvent('User Action', this.name + ' to: ' + this.value);
@@ -76,7 +86,7 @@
 		},
 
 
-		/* returns a pipe-delimeted string of name/val pairs for the user-changable controls */
+		// returns a pipe-delimeted string of name/val pairs for the user-changable controls
 		_serialize: function () {
 			var vals = [];
 			$('input').filter(':checked').add('#numParagraphs').each(function(){
@@ -87,7 +97,7 @@
 
 
 
-		/* Generic function to send and event to GA. Label is always form config. */
+		// Generic function to send and event to GA. Label is always form config.
 		trackEvent: function ( eventname, action ) {
 			if ( window._gaq !== undefined ) {
 				window._gaq.push( ['_trackEvent', eventname, action, this._serialize()] );
