@@ -123,7 +123,7 @@
 	@include switch($switch-paddle-transition-speed, $switch-paddle-transition-ease, $switch-height-sml, $switch-font-size-sml, 2.3em, $switch-paddle-bg, $switch-positive-color, $switch-negative-color, 15px, true);
 }
 
-.update input {
+.update button {
 	@include button($button-med, $primary-color, true, true, false, true);
 }
 
