@@ -28,3 +28,22 @@
     border-bottom: $width $style $color;
   }
 }
+
+// image replacement, ade from examples at
+// http://css-tricks.com/examples/ImageReplacement/
+@mixin ir($type) {
+  @if $type == hbp {
+    border: 0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+  }
+  @else if $type == skm {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  @else {
+    text-indent: -9999px;
+  }
+}
