@@ -699,6 +699,7 @@ $button-radius: $global-radius;
 // We use this to control the margins and padding of the inline list.
 
 // $inline-list-top-margin: 0;
+$inline-list-top-margin: emCalc(17);
 // $inline-list-opposite-margin: 0;
 // $inline-list-bottom-margin: emCalc(17);
 // $inline-list-default-float-margin: emCalc(-22);

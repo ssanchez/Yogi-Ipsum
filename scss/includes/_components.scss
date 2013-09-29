@@ -1,5 +1,4 @@
 .titlebar {
-	// background-color: lighten($primary-color, 15%);
 	background-color: $primary-color;
 	color: $secondary-color;
 	@include borders(8px, solid, $tertiary-color, $top:false, $right:false, $left:false);
@@ -37,7 +36,6 @@
 	}
 	p {
 		@extend .hide-for-small;
-		// background-color: $primary-color;
 		margin-bottom: 0;
 		@include grid-column(12);
 	}
@@ -183,12 +181,12 @@
 	> div {
 		@include grid-row();
 	}
-	p {
-		margin-bottom: 0;
-		padding-top: emCalc(20);
-		padding-bottom: emCalc(16);
-		text-align: right;
-		@include grid-column(12);
+	ul {
+		@include inline-list;
+	}
+
+	a {
+		@include ir(hbp);
 	}
 }
 
