@@ -44,9 +44,9 @@
 		// Opens a new window with passed url. Width and height are optionally
 		// passed in. Menubar and toolbar are explicitly set to off.
 		openWindow: function (url, width, height) {
-			width = typeof width === 'undefined' ? 550 : width;
-			height = typeof height === 'undefined' ? 400 : height;
-			window.open(url, 'kid', 'width='+ width +',height='+ height +',menubar=no,toolbar=no');
+			width = typeof width === 'undefined' ? 600 : width;
+			height = typeof height === 'undefined' ? 500 : height;
+			window.open(url, 'kid', 'width='+ width +',height='+ height +',menubar=no,toolbar=no,scrollbars=no');
 		},
 
 
