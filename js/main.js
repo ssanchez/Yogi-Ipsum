@@ -132,6 +132,8 @@
 		},
 
 
+		// Check the controls and pluck phrases from the available stash.
+		// Returns a string.
 		_getPhrases: function () {
 			var i, j, x, y, z,
 				jumbled = !document.getElementById('jumble').checked,
@@ -160,12 +162,13 @@
 		},
 
 
+		// load up the external JSON set of yogiisms than populate
+		// the speech bubble with a paragraph of random quotes
 		_loadPhrases: function () {
 			var that = this;
 			$.getJSON('phrases.json', function(json, textStatus) {
-				var x = Math.floor( Math.random() * json.phrases.length);
 				that.phrases = json.phrases;
-				that._setPhrases( json.phrases[x].a + json.phrases[x].b );
+				that._setPhrases( that._getPhrases() );
 			});
 		},
 
