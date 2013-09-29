@@ -13,6 +13,8 @@
 
     HTML5, CSS3
     Normalize.css, jQuery, HTML5 Boilerplate, Zurb Foundation 4
+
     IDE: Sublime Text, Photoshop
+    Social Media Icons: http://rog.ie/blog/free-social-media-icons
 
     Source: https://github.com/ssanchez/Yogi-Ipsum/
