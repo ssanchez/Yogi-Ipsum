@@ -179,15 +179,32 @@
 	@include borders(8px, solid, $tertiary-color, $top:false, $right:false, $left:false);
 
 	> div {
-		@include grid-row();
+		@include grid-row;
+	}
+	p {
+		margin-top: emCalc(16);
+		// text-align: left;
+		@include grid-column(12);
+
+		@media #{$small} {
+			text-align: right;
+			@include grid-column(6);
+		}
 	}
 	ul {
 		line-height: 1em;
 		@include inline-list;
-	}
+		@include grid-column(12);
 
+		a {
+			@include ir(hbp);
+		}
+
+		@media #{$small} {
+			@include grid-column(6);
+		}
+	}
 	a {
-		@include ir(hbp);
+		color: $secondary-color;
 	}
 }
-
