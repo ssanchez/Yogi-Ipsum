@@ -182,6 +182,7 @@
 		@include grid-row();
 	}
 	ul {
+		line-height: 1em;
 		@include inline-list;
 	}
 
