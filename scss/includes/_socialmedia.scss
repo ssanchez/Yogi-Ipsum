@@ -1,45 +1,14 @@
-.facebook,
 .github,
-.google_plus,
-.linkedin,
-.pinterest,
-.reddit,
-.tumblr,
 .twitter {
 	background: url(../img/icons.png) no-repeat;
-	width: 32px;
-	height: 32px;
+	width: 24px;
+	height: 24px;
 }
 
-.facebook{
+.github {
+	background-position: 0 -24px;
+}
+
+.twitter {
 	background-position: 0 0;
 }
-
-.github{
-	background-position: 0 -32px;
-}
-
-.google_plus{
-	background-position: 0 -64px;
-}
-
-.linkedin{
-	background-position: 0 -96px;
-}
-
-.pinterest{
-	background-position: 0 -128px;
-}
-
-.reddit{
-	background-position: 0 -160px;
-}
-
-.tumblr{
-	background-position: 0 -192px;
-}
-
-.twitter{
-	background-position: 0 -224px;
-}
-
