@@ -1,5 +1,8 @@
 /**
- * General description of what this file does
+ * JS namespace for Yogi Ipsum with objects ranging from
+ * major functionality like controlling generated text and minor
+ * utilities like analytics.
+ *
  * window.yogiipsum
  *
  * Created by Spencer Sanchez
@@ -125,6 +128,8 @@
 
 		_bindEvents: function () {
 			var that = this;
+
+			// generate new text based on control values and blur
 			$('#generate').click(function(){
 				that._setPhrases( that._getPhrases() );
 				$(this).blur();
