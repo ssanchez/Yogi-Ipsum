@@ -23,13 +23,14 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 
-# Folders to ignore
+# Files / folders to ignore
 .hg
 .svn
 .CVS
 intermediate
 publish
 .idea
+sitemap.xml
 
 # unneeded compiled css folder files
 css/*.css
